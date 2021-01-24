@@ -4,9 +4,183 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
   </head>
+
   <body>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>
+    <header>
+      <nav>
+        <a>
+          <img src="img/top-logo.svg" width="138" height="70"
+            alt="Логотип сайта Седона">
+        </a>
+        <ul>
+          <li><a href="blank.html">Информация</a></li>
+          <li><a href="blank.html">Фото и видео</a></li>
+          <li><a href="#map">Карта штата</a></li>
+          <li><a href="hotels.html">Гостиницы</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+
+      <section>
+        <h1>baner Cedona</h1>
+        <img src="img/main-baner.jpg" width="1200" height="509"
+              alt="Главный банер">
+      </section>
+
+      <section>
+        <h2>Comment baner</h2>
+        <p><b>Седона — небольшой городок в Аризоне, <br>заслуживающий большего!</b></p>
+        <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+      </section>
+
+      <section>
+        <h2>Постер</h2>
+        <ul>
+          <li>
+            <img src="img/house-icon.svg" width="75" height="72"
+              alt="Иконка жилье">
+            <h3>Жилье</h3>
+            <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+          </li>
+          <li>
+            <img src="img/food-icon.svg" width="75" height="72"
+              alt="Иконка еда">
+            <h3>Еда </h3>
+            <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+          </li>
+          <li>
+            <img src="img/souvenir-icon.svg" width="75" height="72"
+              alt="Иконка сувениры">
+            <h3>Жилье</h3>
+            <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Преимущества</h2>
+        <ul>
+          <li>
+            <h3>Настоящий городок</h3>
+            <div>— №1 —</div>
+            <p>Седона - не аттракцион для туристов, там течёт своя жизнь</p>
+            <img src="img/sity-item.png" width="800" height="256"
+              alt="Город">
+          </li>
+          <li>
+            <h3>Там есть мост дъявола</h3>
+            <div>— №2 —</div>
+            <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+            <img src="img/bridge-item.png" width="800" height="256"
+              alt="Мост">
+          </li>
+          <li>
+            <h3>Небольшая площадь</h3>
+            <div>— №3 —</div>
+            <p>все достопримечательности находятся очень близко</p>
+          </li>
+          <li>
+            <h3>Красивая дорога</h3>
+            <div>— №4 —</div>
+            <p>ехать в седону из лас-вегаса совсем не скучно!</p>
+          </li>
+          <li>
+            <h3>Мало туристов</h3>
+            <div>— №5 —</div>
+            <p>большинство едет в гранд каньон и толпится там</p>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Бронирование гостиницы</h2>
+        <p><b>Заинтересовались?</b></p>
+        <a href="#pop-up">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</a>
+      </section>
+
+      <section>
+        <h2>ПОИСК ГОСТИНИЦЫ В седоне</h2>
+        <form method="post" action="https://echo.htmlacademy.ru">
+          <p>
+            <label for="date-in">Дата заезда:</label>
+            <input id="date-in" type="date" name="date-in">
+            <img src="img/calendar-icon.svg" width="21" height="23" alt="Иконка календаря">
+          </p>
+          <p>
+            <label for="date-out">Дата выезда:</label>
+            <input id="date-out" type="date" name="date-out">
+            <img src="img/calendar-icon.svg" width="21" height="23" alt="Иконка календаря">
+          </p>
+          <p>
+            <label for="adult">Взрослые:</label>
+            <img src="img/minus-icon.svg" width="11" height="11" alt="Минус">
+            <input id="adult" type="number" name="adult" value="2">
+            <img src="img/plus-icon.svg" width="11" height="11" alt="Плюс">
+            <label for="date-in">Дети:</label>
+            <img src="img/minus-icon.svg" width="11" height="11" alt="Минус">
+            <input id="child" type="number" name="child" value="1">
+            <img src="img/plus-icon.svg" width="11" height="11" alt="Плюс">
+          </p>
+          <p>
+            <input type="submit" value="Найти">
+          </p>
+        </form>
+      </section>
+
+      <section>
+        <h2>Карта</h2>
+        <map id="map" name="map">
+          <img src="img/map.img" width="1200" height="474" alt="Карта">
+        </map>
+      </section>
+
+    </main>
+
+    <footer>
+
+      <section>
+        <h2>Контакты</h2>
+        <p>
+          #visitSEDONA<br>
+          ТЕЛ: +7(495) 666-01-66
+        </p>
+      </section>
+
+      <section>
+        <h2>Социальные сети</h2>
+        <ul>
+          <li>
+            <a href="#">
+              <img src="img/twitter-icon.svg" width="17" height="15" alt="Твиттер">
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="img/facebook-icon.svg" width="17" height="15" alt="Фейсбук">
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="img/youtube-icon.svg" width="17" height="15" alt="Ютуб">
+            </a>
+          </li>
+        </ul>
+      </section>
+        
+      <section>
+        <h2>Сайт разработан</h2>
+        <p>
+          Website by
+          <a href="https://htmlacademy.ru/intensive/htmlcss">
+            <img src="img/footer-logo-icon.svg" width="115" height="41" alt="Логотип Академии">
+          </a>
+        </p>
+      </section>
+
+    </footer>
 
   </body>
 </html>
