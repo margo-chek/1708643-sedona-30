@@ -26,8 +26,6 @@
 
       <section>
         <h2>Фильтр</h2>
-        <img src="img/hotels-baner.jpg" width="1200" height="509"
-              alt="Гостиницы банер">
         <form method="get" action="https://echo.htmlacademy.ru">
           <fieldset>
             <legend>Инфраструктура:</legend>
@@ -81,37 +79,27 @@
         <h2>Результат поиска</h2>
         <div>
           <b>Найдено: 3</b>
-          Сортировка:
+          <span>Сортировка:</span>
           <ul>
             <li>
-              по цене
+              <a href="#">по цене</a>            
             </li>
             <li>
-              по типу
+              <a href="#">по типу</a>
             </li>
             <li>
-              по рейтингу
+              <a href="#">по рейтингу</a>
             </li>
           </ul>
-          <nav aria-label="Page navigation">
-            <ul class="pagination">
-              <li class="page-item active" aria-current="page">
-                <a class="page-link" href="#">Page 1 <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="page-item disabled">
-                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Page 2</a>
-              </li>
-              <li class="page-item">
-                <a class="page-link" href="#">Page 3</a>
-              </li>
-            </ul>
+          <nav>
+            <a href="#prev"></a>
+            <a href="#next"></a>
           </nav>
         </div>
       </section>
 
       <section>
-        <h2>С
-          Вывод списка результатов фильтра</h2>
+        <h2>Вывод списка результатов фильтра</h2>
         <ul>
           <li>
             <h3>Amara Resort & Spa</h3>
@@ -123,7 +111,7 @@
             </div>
             <div>
               <a href="blank.html">Подробнее</a>
-              <button type="button">Забронировать</button>
+              <a href="blank.html">Забронировать</a>
             </div>
             <div>
               <p>4 звезды</p>
@@ -140,7 +128,7 @@
             </div>
             <div>
               <a href="blank.html">Подробнее</a>
-              <button type="button">Забронировать</button>
+              <a href="blank.html">Забронировать</a>
             </div>
             <div>
               <p>3 звезды</p>
@@ -157,7 +145,7 @@
             </div>
             <div>
               <a href="blank.html">Подробнее</a>
-              <button type="button">Забронировать</button>
+              <a href="blank.html">Забронировать</a>
             </div>
             <div>
               <p>2 звезды</p>
@@ -175,7 +163,7 @@
         <h2>Контакты</h2>
         <p>
           #visitSEDONA<br>
-          ТЕЛ: +7(495) 666-01-66
+          ТЕЛ: <a href="tel:+74956660166">+7(495) 666-01-66</a> 
         </p>
       </section>
 
@@ -184,17 +172,17 @@
         <ul>
           <li>
             <a href="#">
-              <img src="img/twitter-icon.svg" width="17" height="15" alt="Твиттер">
+              <h3 class="visually-hidden">Твиттер</h3>
             </a>
           </li>
           <li>
             <a href="#">
-              <img src="img/facebook-icon.svg" width="17" height="15" alt="Фейсбук">
+              <h3 class="visually-hidden">Фейсбук</h3>
             </a>
           </li>
           <li>
             <a href="#">
-              <img src="img/youtube-icon.svg" width="17" height="15" alt="Ютуб">
+              <h3 class="visually-hidden">Ютуб</h3>
             </a>
           </li>
         </ul>
