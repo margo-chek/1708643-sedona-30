@@ -53,7 +53,7 @@
 }
 
 .page-body {
-    background-color: var(----basic-white);
+    background-color: var(--basic-white);
     box-shadow: 0 5px 15px var(--special-body-shadow);
     max-width: 1200px;
     margin: 0 auto;
