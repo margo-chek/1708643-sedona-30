@@ -104,11 +104,12 @@
     color: var(--basic-blue);
 }
 
-.site-nav-item:focus {
+.site-nav-item:focus,
+.site-nav-item:active {
     color: var(--basic-black-focus);
 }
 
-.site-nav-item:active {
+.site-nav-item.active {
     color: var(--basic-brown);
 }
 
@@ -284,10 +285,16 @@
 .number-input {
     background-color: var(--basic-input-background);
     color: var(--basic-black);
+    font-weight: 700;
     font-size: 14px;
     line-height: 26px;
     border: none;
 }
+
+input::-webkit-input-placeholder {color: var(--basic-black);}
+input::-moz-placeholder          {color: var(--basic-black);}/* Firefox 19+ */
+input:-moz-placeholder           {color: var(--basic-black);}/* Firefox 18- */
+input:-ms-input-placeholder      {color: var(--basic-black);}
 
 .date-input:hover {
     background-color: var(--input-background-hover);
@@ -542,15 +549,21 @@
 .filter-type,
 .filter-rate {
     color: var(--basic-black-focus);
+    text-decoration: none;
+    border-bottom: 1px dashed var(--basic-blue);
 }
 
 .filter-rate:hover {
     color: var(--basic-blue);
+    text-decoration: none;
+    border-bottom: 1px dashed var(--basic-blue);
 }
 
 .filter-rate:active,
 .filter-rate:focus {
     color: var(--basic-black);
+    text-decoration: none;
+    border: none;
 }
 
 .up-icon,
@@ -574,6 +587,7 @@
 .hotel-title {
     font-size: 21px;
     line-height: 26px;
+    color: inherit;
 }
 
 .hotel-title:hover {
