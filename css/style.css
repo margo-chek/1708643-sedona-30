@@ -132,7 +132,7 @@ a {
 }
 
 .nav-item {
-  width: 227px;
+  max-width: 227px;
 }
 
 .right-nav-item {
@@ -485,27 +485,43 @@ input:-ms-input-placeholder      {color: var(--basic-black);}
 .icon-button:active,
 .icon-button:focus {
   color: var(--basic-blue);
+  border: none;
 }
 
-.calendar-icon {
-  background-image: url("../img/icons/calendar-icon.svg");
+.calendar-icon,
+.minus-icon,
+.plus-icon {
   background-color: var(--basic-input-background);
-  width: 21px;
-  height: 23px;
+}
+
+button.minus-icon>svg {
+  margin-bottom: 6px;
+}
+
+button.plus-icon>svg {
+  margin-bottom: 3px;
+}
+
+button.calendar-icon>svg>path,
+button.minus-icon>svg>rect,
+button.plus-icon>svg>path {
+  fill: var(--basic-icon);
+}
+
+button.calendar-icon:hover>svg>path,
+button.minus-icon:hover>svg>rect,
+button.plus-icon:hover>svg>path {
+  fill: var(--basic-black);
+}
+
+button.calendar-icon:active>svg>path,
+button.minus-icon:active>svg>rect,
+button.plus-icon:active>svg>path {
+  fill: var(--basic-blue);
 }
 
 .minus-icon {
-  background-image: url("../img/icons/minus-icon.svg");
   background-color: var(--basic-input-background);
-  width: 12px;
-  height: 3px;
-}
-
-.plus-icon {
-  background-image: url("../img/icons/plus-icon.svg");
-  background-color: var(--basic-input-background);
-  width: 11px;
-  height: 11px;
 }
 
 .number-input {
@@ -627,21 +643,30 @@ input:-ms-input-placeholder      {color: var(--basic-black);}
 }
 
 .twitter-icon {
-  background-image: url("../img/icons/twitter-icon.svg");
+  padding: 16px 15px;
 }
 
 .facebook-icon {
-  background-image: url("../img/icons/fb-icon.svg");
+  padding: 13px 17px;
 }
 
 .youtube-icon {
-  background-image: url("../img/icons/youtube-icon.svg");
+  padding: 16px 13px;
+}
+
+section.social-networks>ul>li>a>svg>path {
+  fill: var(--basic-white);
+}
+
+section.social-networks>ul>li:active>a>svg>path,
+section.social-networks>ul>li:focus>a>svg>path {
+  fill: var(--basic-white-active);
 }
 
 /* Contacts */
 
 .contacts-phone {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* Footer */
@@ -690,15 +715,15 @@ input:-ms-input-placeholder      {color: var(--basic-black);}
   line-height: 26px;
 }
 
-.htmlacademy-logo {
+a.htmlacademy-logo>svg>path {
   fill: var(--basic-logo);
 }
 
-.htmlacademy-logo:hover img {
-  stroke: var(--basic-blue);
+a.htmlacademy-logo:hover>svg>path {
+  fill: var(--basic-blue);
 }
 
-.htmlacademy-logo:active {
+a.htmlacademy-logo:active>svg>path {
   fill: var(--logo-pressed);
 }
 
@@ -722,6 +747,41 @@ input:-ms-input-placeholder      {color: var(--basic-black);}
   justify-content: space-between;
   padding: 25px 70px 30px;
   height: 100%;
+}
+
+.filter-option label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+  margin-left: 38px;
+}
+
+.filter-input-checkbox:hover + label,
+.filter-input-checkbox:focus + label {
+  color: var(--basic-white);
+}
+
+.filter-input-checkbox + label::before {
+  content: "";
+  position: absolute;
+  left: -39px;
+  top: 0;
+  width: 23px;
+  height: 21.5px;
+  border: 2px solid var(--basic-white);
+}
+
+.filter-input-checkbox:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: -38px;
+  width: 22px;
+  height: 16px;
+  background-image: url("img/icons/checkbox-on.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 .left-block-wrapper {
@@ -833,8 +893,7 @@ input:-ms-input-placeholder      {color: var(--basic-black);}
   width: 34px;
 }
 
-.up-icon,
-.down-icon {
+.hotels-nav>a {
   border: none;
   background-color: var(--basic-white);
   width: 11px;
@@ -842,13 +901,22 @@ input:-ms-input-placeholder      {color: var(--basic-black);}
   display: block;
 }
 
-.up-icon {
-  background-image: url("../img/icons/up-dir-icon.svg");
+.hotels-nav>a>svg>path {
+  fill: var(--nav-button-fill);
 }
 
-.down-icon {
-  background-image: url("../img/icons/down-dir-icon.svg");
+.hotels-nav>a:hover>svg>path {
+  fill: var(--basic-black);
 }
+
+.hotels-nav>a:active>svg>path,
+.hotels-nav>a.active>svg>path {
+  fill: var(--basic-blue);
+}
+
+/* .down-icon {
+  transform: rotate(-180deg);
+} */
 
 /* Hotels */
 
