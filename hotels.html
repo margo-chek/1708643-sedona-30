@@ -42,16 +42,16 @@
               <fieldset>
                 <legend class="filter-title">Инфраструктура:</legend>
                 <ul class="simple-list filter-list">
-                  <li class="filter-item filter-option filter-checkbox">
+                  <li class="filter-option filter-checkbox">
                     <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="swimming-pool" id="filter-swimming-pool" checked>
                     <label for="filter-swimming-pool">Бассейн</label>
                   </li>
-                  <li class="filter-item">
-                    <input type="checkbox" name="parking" id="filter-parking">
+                  <li class="filter-option filter-checkbox">
+                    <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="parking" id="filter-parking">
                     <label for="filter-parking">Парковка</label>
                   </li>
-                  <li class="filter-item">
-                    <input type="checkbox" name="wi-fi" id="filter-wi-fi">
+                  <li class="filter-option filter-checkbox">
+                    <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="wi-fi" id="filter-wi-fi">
                     <label for="filter-wi-fi">Wi-Fi</label>
                   </li>
                 </ul>
@@ -59,30 +59,40 @@
               <fieldset>
                 <legend class="filter-title">Тип жилья:</legend>
                 <ul class="simple-list filter-list">
-                  <li class="filter-item">
-                    <input type="checkbox" name="hotel" id="filter-hotel" checked>
+                  <li class="filter-option filter-checkbox">
+                    <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="hotel" id="filter-hotel" checked>
                     <label for="filter-hotel">Гостиница</label>
                   </li>
-                  <li class="filter-item">
-                    <input type="checkbox" name="motel" id="filter-motel" checked>
+                  <li class="filter-option filter-checkbox">
+                    <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="motel" id="filter-motel" checked>
                     <label for="filter-motel">Мотель</label>
                   </li>
-                  <li class="filter-item">
-                    <input type="checkbox" name="apartments" id="filter-apartment" checked>
+                  <li class="filter-option filter-checkbox">
+                    <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="apartments" id="filter-apartment" checked>
                     <label for="filter-apartment">Апартаменты</label>
                   </li>
                 </ul>
               </fieldset>
             </div>
             <div class="right-block-wrapper">
-              <fieldset>
+              <fieldset class="filter-item">
                 <legend class="filter-title">Стоимость в сутки<br>(Р):</legend>
-                <div>
-                  <span class="filter-item">от 0</span>
-                  <span class="filter-item">до 3000</span>
-                </div>
-                <div>
-                  <input value="1800" name="price" type="range">
+                <div class="range-filter">
+                  <div class="price-controls">
+                    <lable class="min-price">от
+                      <input type="number" name="min-price" value="0" aria-label="Минимальная цена">
+                    </lable>
+                    <lable class="max-price">до
+                      <input type="number" name="max-price" value="3000" aria-label="Максимальная цена">
+                    </lable>
+                  </div>
+                  <div class="range-controls">
+                    <div class="scale">
+                      <div class="bar"></div>
+                    </div>
+                    <div class="toggle toggle-min" tabindex="0"></div>
+                    <div class="toggle toggle-max" tabindex="0"></div>
+                  </div>
                 </div>
               </fieldset>
               <button class="button show-button" type="submit">Показать</button>

@@ -749,40 +749,75 @@ a.htmlacademy-logo:active>svg>path {
   height: 100%;
 }
 
+.filter-option {
+  margin-top: 22px;
+}
+
 .filter-option label {
   position: relative;
   display: block;
   cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
-  margin-left: 38px;
+  padding-left: 39px;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  text-transform: uppercase;
 }
 
-.filter-input-checkbox:hover + label,
-.filter-input-checkbox:focus + label {
-  color: var(--basic-white);
+.filter-input-checkbox+label::before:hover,
+.filter-input-checkbox+label::before:focus {
+  border: 2px solid var(--basic-white);
 }
 
 .filter-input-checkbox + label::before {
   content: "";
   position: absolute;
-  left: -39px;
-  top: 0;
+  left: 0;
   width: 23px;
   height: 21.5px;
+  border: 2px solid var(--basic-white);
+}
+
+.filter-input-checkbox:hover+label::before,
+.filter-input-checkbox:focus+label::before {
   border: 2px solid var(--basic-white);
 }
 
 .filter-input-checkbox:checked + label::after {
   content: "";
   position: absolute;
-  top: 4px;
-  left: -38px;
-  width: 22px;
-  height: 16px;
-  background-image: url("img/icons/checkbox-on.svg");
+  left: 0;
+  width: 27px;
+  height: 23px;
+  background-image: url("../img/icons/checkbox-on.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
 }
+
+.filter-input-checkbox:disabled + label::after {
+  border: 2px solid var(--checkbox-disabled);
+  /* opacity: 0.1; */
+}
+
+.filter-input-checkbox:checked:disabled + label::after {
+  background-image: url("../img/icons/checkbox-on-check.svg");
+  border: none;
+  /* opacity: 0.1; */
+  /* color: var(--checkbox-disabled); */
+}
+
+.filter-input-checkbox:checked:hover + label::after,
+.filter-input-checkbox:checked:focus + label::after {
+  opacity: 1;
+}
+
+/* .filter-input-checkbox:checked + label::before {
+  opacity: 0;
+} */
 
 .left-block-wrapper {
   display: flex;
@@ -801,7 +836,7 @@ a.htmlacademy-logo:active>svg>path {
 }
 
 .right-block-wrapper {
-  width: 203px;
+  width: 317px;
 }
 
 .filter-result {
@@ -820,9 +855,147 @@ a.htmlacademy-logo:active>svg>path {
 }
 
 .filter-item {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.range-filter {
+  width: 317px;
+  margin-top: 1px;
+}
+
+.filter-item legend {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.price-controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border: 2px solid var(--basic-white);
+  box-sizing: border-box;
+  border-radius: 2px;
+  height: 34px;
+}
+
+.price-controls lable {
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
+  text-transform: uppercase;
+}
+
+.price-controls input {
+  width: 80px;
+  line-height: 21px;
+  padding: 0;
+  margin-left: 4px;
+  text-align: center;
+  color: var(--basic-white);
+  border: none;
+  border-radius: 5px;
+  background: transparent;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.min-price,
+.max-price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: inherit;
+  width: 50%;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.min-price {
+  padding-left: 60px;
+}
+
+.max-price {
+  padding-left: 52px;
+}
+
+.min-price > input {
+  width: 24px;
+}
+
+.max-price > input {
+  width: 46px;
+}
+
+.min-price::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 21px;
+  top: 4px;
+  right: 0;
+  background: var(--basic-white);
+}
+
+.range-controls {
+  position: relative;
+  height: 41px;
+  margin-bottom: 8px;
+  padding: 18px 0 0 15px;
+  background-color: transparent;
+  border-radius: 5px;
+}
+
+.range-controls .scale {
+  height: 2px;
+  background-color: var(--basic-white-active);
+}
+
+.range-controls .bar {
+  width: 81%;
+  height: 2px;
+  background-color: var(--basic-white);
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: 11px;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  padding: 0;
+  border: 8px solid var(--basic-white);
+  background-color: blueviolet;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 gray;
+  cursor: pointer;
+}
+
+.range-controls .toggle-min {
+  left: 0;
+}
+
+.range-controls .toggle-max {
+  left: 248px;
+}
+
+.toggle-min:after,
+.toggle-max:after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 3px;
+  border: 2px solid var(--basic-grey-focus);
+  border-radius: 50%;
+  top: -3px;
+  margin-left: -2px;
 }
 
 .breadcrumbs {
