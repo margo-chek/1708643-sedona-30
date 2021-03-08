@@ -957,7 +957,7 @@ a.htmlacademy-logo:active > svg > path {
   height: 36px;
 }
 
-.price-controls lable {
+.price-controls label {
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
@@ -1029,7 +1029,7 @@ a.htmlacademy-logo:active > svg > path {
   height: 20px;
   padding: 0;
   border: 8px solid var(--basic-white);
-  background-color: transparent;
+  background-color: var(--filter-button-hover);
   border-radius: 50%;
   box-shadow: 0 2px 1px 0 var(--basic-grey-focus);
   cursor: pointer;
