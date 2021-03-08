@@ -852,7 +852,7 @@ a.htmlacademy-logo:active > svg > path {
   text-transform: uppercase;
 }
 
-fieldset:nth-child(2) > .filter-list > .filter-option > label {
+.fieldset label {
   padding-left: 43px;
 }
 
