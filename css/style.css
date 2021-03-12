@@ -797,15 +797,15 @@ section.social-networks > ul > li:focus > a > svg > path {
   line-height: 26px;
 }
 
-a.htmlacademy-logo > svg > path {
+a.htmlacademy-logo path {
   fill: var(--basic-logo);
 }
 
-a.htmlacademy-logo:hover > svg > path {
+a.htmlacademy-logo:hover path {
   fill: var(--basic-blue);
 }
 
-a.htmlacademy-logo:active > svg > path {
+a.htmlacademy-logo:active path {
   fill: var(--logo-pressed);
 }
 
@@ -827,7 +827,8 @@ a.htmlacademy-logo:active > svg > path {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 25px 70px 30px;
+  flex-wrap: wrap;
+  padding: 25px 70px 26px;
   height: 100%;
 }
 
@@ -896,6 +897,11 @@ a.htmlacademy-logo:active > svg > path {
   display: flex;
   flex-direction: row;
   justify-content: start;
+  flex-wrap: wrap;
+}
+
+fieldset:nth-child(n + 5) > .filter-title {
+  padding-top: 30px;
 }
 
 .left-block-wrapper > fieldset,
@@ -906,6 +912,10 @@ a.htmlacademy-logo:active > svg > path {
 
 .left-block-wrapper > fieldset:not(:last-child) {
   margin-right: 115px;
+}
+
+.left-block-wrapper > fieldset:nth-child(n + 5) {
+  padding-bottom: 30px;
 }
 
 .right-block-wrapper {
