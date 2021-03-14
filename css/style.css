@@ -133,6 +133,7 @@ a {
 
 .nav-item {
   width: 228px;
+  z-index: 99;
 }
 
 li.nav-item:nth-child(3),
@@ -408,6 +409,7 @@ li.nav-item:nth-child(3) {
   position: absolute;
   transform: translateX(-50%);
   left: 50%;
+  z-index: 99;
 }
 
 .search-form-container > p {
@@ -814,6 +816,7 @@ a.htmlacademy-logo:active path {
 .background-filter {
   width: 100%;
   min-height: 217px;
+  height: auto;
   background-color: var(--basic-blue);
   background-image: url("../img/background-filter.jpg");
   background-position: top center;
