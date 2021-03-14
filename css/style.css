@@ -644,28 +644,28 @@ button.plus-icon:active > svg > path {
   border: 2px solid var(--basic-white);
   box-sizing: border-box;
   border-radius: 2px;
-  max-width: 137px;
+  width: 137px;
   padding: 6px 35px;
   margin: 6px 84px;
 }
 
 .more-button {
   background-color: var(--basic-blue);
-  max-width: 110px;
+  width: 110px;
   padding: 3px 19px;
   margin-right: 6px;
 }
 
 .booking-button {
   background-color: var(--basic-brown);
-  max-width: 142px;
+  width: 142px;
   padding: 3px 16px;
 }
 
 .rating-button {
   background-color: var(--basic-page-background);
   color: var(--basic-grey);
-  max-width: 110px;
+  width: 110px;
   padding: 3px 12px;
   font-weight: 400;
 }
@@ -860,8 +860,7 @@ a.htmlacademy-logo:active path {
 }
 
 .filter-input-checkbox + label::before,
-.filter-input-checkbox:hover + label::before,
-.filter-input-checkbox:focus + label::before {
+.filter-input-checkbox:hover + label::before {
   content: "";
   position: absolute;
   left: 0;
@@ -870,6 +869,10 @@ a.htmlacademy-logo:active path {
   background-image: url("../img/icons/checkbox-off.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+}
+
+.filter-input-checkbox:focus + label::before {
+  border: 2px solid var(--basic-black);
 }
 
 .filter-input-checkbox:checked + label::before {
