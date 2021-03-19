@@ -16,8 +16,8 @@ searchForm.addEventListener("click", function(e) {
 });
 
 form.addEventListener("submit", function(e) {
-  e.preventDefault();
   if (!dateIn.value || !dateOut.value || !adult.value) {
+    e.preventDefault();
     alert("Заполните обязательные поля");
   }
 })
